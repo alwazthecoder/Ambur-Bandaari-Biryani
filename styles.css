@@ -325,7 +325,8 @@ footer {
   border-bottom: 2px solid var(--gold);
 }
 .logo-container {
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
   gap: 0.7em;
 }
