@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambur Bandaari Biryani</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+  <!-- Royal Header with Gold Logo -->
+  <header class="royal-header">
+    <div class="logo-container">
+      <svg class="logo-svg" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="26" stroke="#d4af37" stroke-width="4" fill="#181212"/>
+        <path d="M28 12 L34 28 L28 44 L22 28 Z" fill="#d4af37"/>
+        <circle cx="28" cy="28" r="6" fill="#8b1f1f" stroke="#d4af37" stroke-width="2"/>
+      </svg>
+      <span class="logo-text">Ambur Bandaari Biryani</span>
+    </div>
+    <nav class="royal-nav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#branches">Branches</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Order</a>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="section-filigree-top">
+        <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 16 Q30 0 60 16 Q90 32 110 16" stroke="#d4af37" stroke-width="3" fill="none"/>
+        </svg>
+      </div>
+      <h1 class="hero-title">Ambur Bandaari Biryani</h1>
+      <p class="hero-tagline">Where Tradition Meets Taste</p>
+      <a href="#contact" class="order-btn">Order Now</a>
+      <div class="section-filigree-bottom">
+        <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 16 Q30 32 60 16 Q90 0 110 16" stroke="#d4af37" stroke-width="3" fill="none"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <!-- About Us -->
+  <section class="about" id="about">
+    <div class="about-bg-parallax"></div>
+    <div class="about-content">
+      <div class="section-filigree-top">
+        <svg width="90" height="24" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12 Q20 0 45 12 Q70 24 85 12" stroke="#d4af37" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <h2>Our Story</h2>
+      <p>We started Ambur Bandaari Biryani with a passion for authentic flavors. Inspired by the rich culinary heritage of Ambur, our chefs craft each dish with love and tradition. Today, with 4 branches in Chennai, we bring the royal taste of biryani to your plate.</p>
+      <div class="section-filigree-bottom">
+        <svg width="90" height="24" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12 Q20 24 45 12 Q70 0 85 12" stroke="#d4af37" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <!-- Menu -->
+  <section class="menu" id="menu">
+    <div class="section-filigree-top">
+      <svg width="90" height="24" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12 Q20 0 45 12 Q70 24 85 12" stroke="#d4af37" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/chicken-biryani.jpg" alt="Chicken Biryani">
+        <h3>Chicken Biryani</h3>
+        <p class="price">₹250</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/mutton-biryani.jpg" alt="Mutton Biryani">
+        <h3>Mutton Biryani</h3>
+        <p class="price">₹350</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/family-pack.jpg" alt="Family Pack">
+        <h3>Family Pack</h3>
+        <p class="price">₹999</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/kebab.jpg" alt="Kebab">
+        <h3>Kebab</h3>
+        <p class="price">₹180</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/dessert.jpg" alt="Dessert">
+        <h3>Gulab Jamun</h3>
+        <p class="price">₹90</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branches -->
+  <section class="branches" id="branches">
+    <h2>Our Branches</h2>
+    <div class="branches-list">
+      <div class="branch">
+        <h3>Ambur Bandaari Biryani - T. Nagar</h3>
+        <p>123, North Usman Road, T. Nagar, Chennai - 600017</p>
+        <iframe src="https://www.google.com/maps?q=13.0418,80.2337&z=15&output=embed"></iframe>
+      </div>
+      <div class="branch">
+        <h3>Ambur Bandaari Biryani - Velachery</h3>
+        <p>45, 100 Feet Bypass Road, Velachery, Chennai - 600042</p>
+        <iframe src="https://www.google.com/maps?q=12.9791,80.2214&z=15&output=embed"></iframe>
+      </div>
+      <div class="branch">
+        <h3>Ambur Bandaari Biryani - Anna Nagar</h3>
+        <p>78, 2nd Avenue, Anna Nagar, Chennai - 600040</p>
+        <iframe src="https://www.google.com/maps?q=13.0878,80.2105&z=15&output=embed"></iframe>
+      </div>
+      <div class="branch">
+        <h3>Ambur Bandaari Biryani - Adyar</h3>
+        <p>12, Sardar Patel Road, Adyar, Chennai - 600020</p>
+        <iframe src="https://www.google.com/maps?q=13.0067,80.2570&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-scroll">
+      <img src="images/gallery1.jpg" alt="Biryani 1">
+      <img src="images/gallery2.jpg" alt="Biryani 2">
+      <img src="images/gallery3.jpg" alt="Biryani 3">
+      <img src="images/gallery4.jpg" alt="Biryani 4">
+      <img src="images/gallery5.jpg" alt="Biryani 5">
+    </div>
+  </section>
+
+  <!-- Contact / Order Now -->
+  <section class="contact" id="contact">
+    <h2>Contact / Order Now</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="order" placeholder="Order Details" required></textarea>
+      <button type="submit" class="order-btn">Submit</button>
+    </form>
+    <div class="social-links">
+      <a href="#" class="social-icon" aria-label="Instagram"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="gold"/></svg></a>
+      <a href="#" class="social-icon" aria-label="Facebook"><svg width="24" height="24"><rect x="4" y="4" width="16" height="16" fill="gold"/></svg></a>
+      <a href="#" class="social-icon" aria-label="WhatsApp"><svg width="24" height="24"><polygon points="12,2 22,22 2,22" fill="gold"/></svg></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Ambur Bandaari Biryani. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html> 
