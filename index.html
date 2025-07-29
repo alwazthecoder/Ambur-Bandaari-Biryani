@@ -1,170 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ambur Bandaari Biryani</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta name="description" content="Premium handcrafted leather shoes, belts, bags, and accessories from Star Leather Hub. Timeless style meets comfort and quality.">
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="sendMail.js" defer></script>
 </head>
 <body>
-  <!-- Royal Header with Gold Logo -->
-  <header class="royal-header">
-    <div class="logo-container">
-      <svg class="logo-svg" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="28" cy="28" r="26" stroke="#d4af37" stroke-width="4" fill="#181212"/>
-        <path d="M28 12 L34 28 L28 44 L22 28 Z" fill="#d4af37"/>
-        <circle cx="28" cy="28" r="6" fill="#8b1f1f" stroke="#d4af37" stroke-width="2"/>
-      </svg>
-      <span class="logo-text">Ambur Bandaari Biryani</span>
+  <header>
+    <div class="container nav-container">
+      <div class="left-logo">
+        <img src="asset/logo.png" alt="Logo" class="logo-img" />
+      </div>
+      
+      <nav class="center-nav">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#collection">Menu</a></li>
+          <li><a href="#branches">Branches</a></li>
+          <li><a href="#story">About</a></li> 
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger-btn">☰</button>
+      </nav>
+  
+      <!-- <div class="right-toggle">
+        <button id="darkModeToggle" class="dark-mode-btn">🌓</button>
+      </div> -->
     </div>
-    <nav class="royal-nav">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#menu">Menu</a>
-      <a href="#branches">Branches</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Order</a>
-    </nav>
   </header>
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="section-filigree-top">
-        <!-- <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 16 Q30 0 60 16 Q90 32 110 16" stroke="#d4af37" stroke-width="3" fill="none"/>
-        </svg> -->
-      </div>
-      <h1 class="hero-title">Ambur Bandaari Biryani</h1>
-      <p class="hero-tagline">Where Tradition Meets Taste</p>
-      <a href="#contact" class="order-btn">Order Now</a>
-      <div class="section-filigree-bottom">
-        <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 16 Q30 32 60 16 Q90 0 110 16" stroke="#d4af37" stroke-width="3" fill="none"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-  <!-- About Us -->
-  <section class="about" id="about">
-    <div class="about-bg-parallax"></div>
-    <div class="about-content">
-      <div class="section-filigree-top">
-        <svg width="90" height="24" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 12 Q20 0 45 12 Q70 24 85 12" stroke="#d4af37" stroke-width="2" fill="none"/>
-        </svg>
-      </div>
-      <h2>Our Story</h2>
-      <p>We started Ambur Bandaari Biryani with a passion for authentic flavors. Inspired by the rich culinary heritage of Ambur, our chefs craft each dish with love and tradition. Today, with 4 branches in Chennai, we bring the royal taste of biryani to your plate.</p>
-      <div class="section-filigree-bottom">
-        <svg width="90" height="24" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 12 Q20 24 45 12 Q70 0 85 12" stroke="#d4af37" stroke-width="2" fill="none"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-  <!-- Menu -->
-  <section class="menu" id="menu">
-    <div class="section-filigree-top">
-      <svg width="90" height="24" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 12 Q20 0 45 12 Q70 24 85 12" stroke="#d4af37" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-    <h2>Our Menu</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="images/chicken-biryani.jpg" alt="Chicken Biryani">
-        <h3>Chicken Biryani</h3>
-        <p class="price">₹250</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/mutton-biryani.jpg" alt="Mutton Biryani">
-        <h3>Mutton Biryani</h3>
-        <p class="price">₹350</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/family-pack.jpg" alt="Family Pack">
-        <h3>Family Pack</h3>
-        <p class="price">₹999</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/kebab.jpg" alt="Kebab">
-        <h3>Kebab</h3>
-        <p class="price">₹180</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/dessert.jpg" alt="Dessert">
-        <h3>Gulab Jamun</h3>
-        <p class="price">₹90</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Branches -->
-  <section class="branches" id="branches">
-    <h2>Our Branches</h2>
-    <div class="branches-list">
-      <div class="branch">
-        <h3>Ambur Bandaari Biryani - T. Nagar</h3>
-        <p>123, North Usman Road, T. Nagar, Chennai - 600017</p>
-        <iframe src="https://www.google.com/maps?q=13.0418,80.2337&z=15&output=embed"></iframe>
-      </div>
-      <div class="branch">
-        <h3>Ambur Bandaari Biryani - Velachery</h3>
-        <p>45, 100 Feet Bypass Road, Velachery, Chennai - 600042</p>
-        <iframe src="https://www.google.com/maps?q=12.9791,80.2214&z=15&output=embed"></iframe>
-      </div>
-      <div class="branch">
-        <h3>Ambur Bandaari Biryani - Anna Nagar</h3>
-        <p>78, 2nd Avenue, Anna Nagar, Chennai - 600040</p>
-        <iframe src="https://www.google.com/maps?q=13.0878,80.2105&z=15&output=embed"></iframe>
-      </div>
-      <div class="branch">
-        <h3>Ambur Bandaari Biryani - Adyar</h3>
-        <p>12, Sardar Patel Road, Adyar, Chennai - 600020</p>
-        <iframe src="https://www.google.com/maps?q=13.0067,80.2570&z=15&output=embed"></iframe>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="home">
+  <div class="img-box">  
+      <img src="asset/biryani.png" alt="main_banner" >
+  </div>
+  <div class="hero-content">
+    <h1>Ambur Bandaari Biryani</h1>
+    <p>Crafted with centuries of tradition and the richest spices — our biryani isn't just food, it's an emotion.</p>
+    <a href="#collection" class="btn-primary">Explore Our Menu</a>
+  </div>
+</section>
+     <section class="collection" id="collection">
+       <div class="container" data-aos="fade-up">
+        <div class="container">
+          <h2 class="section-title">The Royal Spread</h2>
+          <h3>Where every bite tells a story of tradition, passion, and royal indulgence.</h3>
+          <div class="products">
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="product-image">
+                <img src="asset/chicken-biryani.png" alt="Chicken Biryani" />
+                <div class="product-tag">Best Seller</div>
+              </div>
+              <div class="product-info">
+                <h3>Chicken Biryani</h3>
+                <p>Tender chicken marinated in royal spices, layered with fragrant basmati rice</p>
+              </div>
+            </div>
+            
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="product-image">
+                <img src="asset/mutton-biryani.png" alt="Mutton Biryani" />
+                <div class="product-tag">Royal Pick</div>
+              </div>
+              <div class="product-info">
+                <h3>Mutton Biryani</h3>
+                <p>Succulent mutton slow-cooked with aromatic spices and premium rice</p>
+              </div>
+            </div>
+            
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="product-image">
+                <img src="asset/mutton-biryani.png" alt="Traditional Sweets" />
+                <div class="product-tag">Sweet Delight</div>
+              </div>
+              <div class="product-info">
+                <h3>Traditional Sweets</h3>
+                <p>Muttanjan and other traditional desserts that complete your royal feast</p>
+              </div>
+            </div>
+            
+            <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="product-image">
+                <img src="asset/biryani.png" alt="Beeda" />
+                <div class="product-tag">Traditional</div>
+              </div>
+              <div class="product-info">
+                <h3>Beeda</h3>
+                <p>Authentic betel leaf preparation with aromatic spices and nuts</p>
+              </div>
+            </div>
+            
+            <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="product-image">
+                <img src="asset/chicken-biryani.png" alt="Salna & Raita" />
+                <div class="product-tag">Perfect Pair</div>
+              </div>
+              <div class="product-info">
+                <h3>Salna & Raita</h3>
+                <p>Rich gravy and cooling yogurt accompaniment for the perfect balance</p>
+              </div>
+            </div>
+            
+            <div class="product-card coming-soon" data-aos="fade-up" data-aos-delay="600">
+              <div class="product-image">
+                <img src="asset/mutton-biryani.png" alt="Chef's Special" />
+                <div class="product-tag">Coming Soon</div>
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Chef's Special</h3>
+                    <p>Something extraordinary is brewing in our kitchen</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Chef's Special</h3>
+                <p>An exclusive creation that will redefine your dining experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
 
-  <!-- Gallery -->
-  <section class="gallery" id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-scroll">
-      <img src="images/gallery1.jpg" alt="Biryani 1">
-      <img src="images/gallery2.jpg" alt="Biryani 2">
-      <img src="images/gallery3.jpg" alt="Biryani 3">
-      <img src="images/gallery4.jpg" alt="Biryani 4">
-      <img src="images/gallery5.jpg" alt="Biryani 5">
-    </div>
-  </section>
 
-  <!-- Contact / Order Now -->
-  <section class="contact" id="contact">
-    <h2>Contact / Order Now</h2>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <textarea name="order" placeholder="Order Details" required></textarea>
-      <button type="submit" class="order-btn">Submit</button>
+
+    <section class="branches-section" id="branches">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Our Branches</h2>
+        <h3 class="branches-subtitle">Experience the authentic taste of Ambur Bandaari Biryani across Chennai</h3>
+        
+        <div class="branches-grid">
+          <div class="branch-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="branch-icon">🏙️</div>
+            <h3 class="branch-name">Triplicane</h3>
+            <div class="branch-details">
+              <p class="branch-timing">🕒 11AM – 11PM</p>
+              <p class="branch-phone">📞 +91 9003500426</p>
+            </div>
+            <a href="https://maps.google.com/?q=Triplicane+Chennai" target="_blank" rel="noopener noreferrer" class="branch-location-btn">
+              View Location
+            </a>
+          </div>
+
+          <div class="branch-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="branch-icon">🏙️</div>
+            <h3 class="branch-name">Ice House</h3>
+            <div class="branch-details">
+              <p class="branch-timing">🕒 11AM – 11PM</p>
+              <p class="branch-phone">📞 +91 9003500426</p>
+            </div>
+            <a href="https://maps.google.com/?q=Central+Chennai" target="_blank" rel="noopener noreferrer" class="branch-location-btn">
+              View Location
+            </a>
+          </div>
+
+          <div class="branch-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="branch-icon">🏙️</div>
+            <h3 class="branch-name">Royapettah</h3>
+            <div class="branch-details">
+              <p class="branch-timing">🕒 11AM – 11PM</p>
+              <p class="branch-phone">📞 +91 9003500426</p>
+            </div>
+            <a href="https://maps.google.com/?q=Koyambedu+Chennai" target="_blank" rel="noopener noreferrer" class="branch-location-btn">
+              View Location
+            </a>
+          </div>
+
+          <div class="branch-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="branch-icon">🏙️</div>
+            <h3 class="branch-name">Cheppakkam</h3>
+            <div class="branch-details">
+              <p class="branch-timing">🕒 11AM – 11PM</p>
+              <p class="branch-phone">📞 +91 9003500426</p>
+            </div>
+            <a href="https://maps.google.com/?q=Egmore+Chennai" target="_blank" rel="noopener noreferrer" class="branch-location-btn">
+              View Location
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-story-section" id="story">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Our Story</h2>
+        
+        <div class="story-content">
+          <div class="story-text" data-aos="fade-right">
+            <p class="story-narrative">
+              From the bustling streets of Ambur to the heart of Chennai, our journey began with a simple dream. A man, carrying the authentic taste of his hometown in his heart, moved to Chennai with one mission: to let people experience the real Ambur Biryani without having to travel miles.
+            </p>
+            <p class="story-narrative">
+              Starting from a humble kitchen, he stayed true to the traditional recipes passed down through generations. Every spice, every technique, every secret ingredient remained unchanged — just like the love and passion that goes into every plate.
+            </p>
+            <p class="story-narrative">
+              Today, what started as a small dream has become a beloved destination for biryani lovers across Chennai. Our commitment to authenticity has never wavered, and neither has the love our customers show us.
+            </p>
+            
+            <div class="story-tagline" data-aos="fade-up" data-aos-delay="300">
+              <h3>"No need to go to Ambur — when Ambur Bandaari Biryani is here!"</h3>
+            </div>
+          </div>
+          
+          <div class="story-image" data-aos="fade-left">
+            <div class="image-placeholder">
+              <div class="cooking-icon">🍛</div>
+              <div class="image-text">
+                <h4>Traditional Recipe</h4>
+                <p>Handcrafted with love since generations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-container">
+      
+      <div class="contact-info">
+        <h3>Let's Connect</h3>
+        <p>Have questions or want a custom order? Reach out — we’re always here to serve you the real Ambur experience.</p>
+        <ul>
+          <li><strong>📍 Address:</strong> Lababin complex, shop no: 06, labbipet vijayawada-10</li>
+          <li><strong>📞 Phone:</strong> +91 9003500426</li>
+          <li><strong>✉️ Email:</strong> amburbandaaribiryani@gmail.com</li>
+        </ul>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/amburbandaaribiryani" target="_blank" rel="noopener noreferrer">
+          <img src="asset/insta.png" alt="Instagram">
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb75wbh1dAw4yyagwv2u" target="_blank" rel="noopener noreferrer">
+          <img src="asset/whatsapp.png" alt="WhatsApp Group">
+        </a>
+        <a href="https://youtube.com/@amburbandaaribiryani?si=c88eCVBxTUg1_lQn " target="_blank" rel="noopener noreferrer">
+          <img src="asset/youtube.png" alt="Youtube">
+        </a>
+      </div>
+
+      </div>
+    <form class="contact-form" id="contact-form">
+    <input type="text" name="name" id="name" placeholder="Your Name" required />
+    <input type="email" name="email" id="email" placeholder="Your Email" required />
+    <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number" required />
+    <textarea rows="5" name="message" id="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn-primary">Send Message</button>
     </form>
-    <div class="social-links">
-      <a href="#" class="social-icon" aria-label="Instagram"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="gold"/></svg></a>
-      <a href="#" class="social-icon" aria-label="Facebook"><svg width="24" height="24"><rect x="4" y="4" width="16" height="16" fill="gold"/></svg></a>
-      <a href="#" class="social-icon" aria-label="WhatsApp"><svg width="24" height="24"><polygon points="12,2 22,22 2,22" fill="gold"/></svg></a>
     </div>
-  </section>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; Ambur Bandaari Biryani. All rights reserved.</p>
+  </div>
+</footer>
 
-  <footer>
-    <p>&copy; 2024 Ambur Bandaari Biryani. All rights reserved.</p>
-  </footer>
 
-  <script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  // Navbar active state and smooth scrolling
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id]');
+    
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Update active nav link based on scroll position
+    function updateActiveNavLink() {
+      const scrollPos = window.scrollY + 100; // Offset for fixed header
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          // Remove active class from all links
+          navLinks.forEach(link => link.classList.remove('active'));
+          
+          // Add active class to current section's link
+          const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }
+    
+    // Update active link on scroll
+    window.addEventListener('scroll', updateActiveNavLink);
+    
+    // Set initial active state
+    updateActiveNavLink();
+    
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger-btn');
+    const navLinksContainer = document.querySelector('.nav-links');
+    
+    if (hamburger) {
+      hamburger.addEventListener('click', function() {
+        navLinksContainer.classList.toggle('show');
+      });
+    }
+    
+    // Close mobile menu when clicking on a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinksContainer.classList.remove('show');
+      });
+    });
+  });
+</script>
 </body>
-</html> 
+</html>
