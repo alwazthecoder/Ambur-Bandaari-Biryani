@@ -133,13 +133,14 @@
   width: 100%;
   height: 100vh;
   position: absolute;
-  
+  overflow: hidden;
 }
+
 .img-box img{
-  width:100%;
-  height: 100vh;
-  /* max-width: 1520px; */
-  /* opacity: .6;/ */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .hero::after {
   content: '';
