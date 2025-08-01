@@ -50,8 +50,17 @@
         <div class="container">
           <h2 class="section-title">The Royal Spread</h2>
           <h3>Where every bite tells a story of tradition, passion, and royal indulgence.</h3>
+          
+          <!-- Filter Buttons -->
+          <div class="filter-buttons" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="biryani">Biryani</button>
+            <button class="filter-btn" data-filter="mandi">Mandi</button>
+            <button class="filter-btn" data-filter="sweets">Sweets</button>
+          </div>
+          
           <div class="products">
-            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card" data-category="biryani" data-aos="fade-up" data-aos-delay="100">
               <div class="product-image">
                 <img src="asset/chicken-biryani.png" alt="Chicken Biryani" />
                 <div class="product-tag">Best Seller</div>
@@ -62,7 +71,7 @@
               </div>
             </div>
             
-            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card" data-category="biryani" data-aos="fade-up" data-aos-delay="200">
               <div class="product-image">
                 <img src="asset/mutton-biryani.png" alt="Mutton Biryani" />
                 <div class="product-tag">Royal Pick</div>
@@ -73,46 +82,72 @@
               </div>
             </div>
             
-            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="product-image">
-                <img src="asset/mutton-biryani.png" alt="Traditional Sweets" />
-                <div class="product-tag">Sweet Delight</div>
-              </div>
-              <div class="product-info">
-                <h3>Traditional Sweets</h3>
-                <p>Muttanjan and other traditional desserts that complete your royal feast</p>
-              </div>
-            </div>
+
             
-            <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="product-card" data-category="biryani" data-aos="fade-up" data-aos-delay="400">
               <div class="product-image">
-                <img src="asset/biryani.png" alt="Beeda" />
+                <img src="asset/naatu-kozhi-biryani.png" alt="Beeda" />
                 <div class="product-tag">Traditional</div>
               </div>
               <div class="product-info">
-                <h3>Beeda</h3>
+                <h3>Naattu Kozhi Biryani</h3>
                 <p>Authentic betel leaf preparation with aromatic spices and nuts</p>
               </div>
             </div>
-            
-            <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+
+
+                        <div class="product-card" data-category="mandi" data-aos="fade-up" data-aos-delay="300">
               <div class="product-image">
-                <img src="asset/chicken-biryani.png" alt="Salna & Raita" />
+                <img src="asset/mutton-mandi.png" alt="Mutton-Mandi" />
+                <div class="product-tag">Royal Pick</div>
+              </div>
+              <div class="product-info">
+                <h3>Mutton Mandi Biryani</h3>
+                <p>Where Emirati Heritage Meets Indian Appetite</p>
+              </div>
+            </div>
+            
+            <div class="product-card" data-category="biryani" data-aos="fade-up" data-aos-delay="500">
+              <div class="product-image">
+                <img src="asset/bamboo-biryani.png" alt="Salna & Raita" />
                 <div class="product-tag">Perfect Pair</div>
               </div>
               <div class="product-info">
-                <h3>Salna & Raita</h3>
+                <h3>Bamboo Biryani</h3>
+                <p>Rich gravy and cooling yogurt accompaniment for the perfect balance</p>
+              </div>
+            </div>
+
+
+                       <div class="product-card" data-category="biryani" data-aos="fade-up" data-aos-delay="500">
+              <div class="product-image">
+                <img src="asset/lolipop-biryani.png" alt="Lolipop Biryani" />
+                <div class="product-tag">Perfect Pair</div>
+              </div>
+              <div class="product-info">
+                <h3>Lollipop Chicken Biryani</h3>
+                <p>Rich gravy and cooling yogurt accompaniment for the perfect balance</p>
+              </div>
+            </div>
+
+                            <div class="product-card" data-category="sweets" data-aos="fade-up" data-aos-delay="500">
+              <div class="product-image">
+                <img src="asset/raita.png" alt="Raita img" />
+                <div class="product-tag">Perfect Pair</div>
+              </div>
+              <div class="product-info">
+                <h3>Raita</h3>
                 <p>Rich gravy and cooling yogurt accompaniment for the perfect balance</p>
               </div>
             </div>
             
-            <div class="product-card coming-soon" data-aos="fade-up" data-aos-delay="600">
+            <div class="product-card coming-soon" data-category="mandi" data-aos="fade-up" data-aos-delay="600">
               <div class="product-image">
-                <img src="asset/mutton-biryani.png" alt="Chef's Special" />
-                <div class="product-tag">Coming Soon</div>
+                <img src="asset/big-mutton-mandi.png" alt="Chef's Special" />
+                <div class="product-tag">Pre-Order Only</div>
                 <div class="overlay">
                   <div class="overlay-content">
-                    <h3>Chef's Special</h3>
+                    <h3>Mutton Mandi Biryani</h3>
                     <p>Something extraordinary is brewing in our kitchen</p>
                   </div>
                 </div>
@@ -332,6 +367,49 @@
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
         navLinksContainer.classList.remove('show');
+      });
+    });
+    
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Filter products with smooth animation
+        productCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          
+          if (filterValue === 'all' || cardCategory === filterValue) {
+            // Show card with fade-in animation
+            card.style.display = 'block';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+              card.style.transition = 'all 0.6s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            // Hide card with fade-out animation
+            card.style.transition = 'all 0.4s ease';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(-20px)';
+            
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 400);
+          }
+        });
       });
     });
   });
